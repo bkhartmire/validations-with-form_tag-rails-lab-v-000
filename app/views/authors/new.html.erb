@@ -2,7 +2,10 @@
   <div id="error_explanation">
     <h2>There were some errors:</h2>
     <ul>
-  </ul>
+      <% @author.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
   </div>
 <%end%>
 <h2>Create an Author</h2>
